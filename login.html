@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Webchat Simpel Untuk Praktek."/>
+    <meta name="keywords" content="Komunitas, Pamekasan, Madura, Programming, chat, webchat, firebase, javascript"/>
+    <meta name="author" content="Pamekasancode Team"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+</head>
+<script>
+    if(localStorage.getItem("chat-js")) {
+        window.location.replace("index.html")
+    }
+</script>
+<body>
+    <div class="login">
+        <div class="login-content">
+            <h2>Chat-Js</h2>
+            <p>Aplikasi Chatting Simpel Javascript</p>
+            <div class="input">
+                <form id="form-login">
+                    <input type="text" id="username" placeholder="Username" autocomplete="off" autofocus="on" required>
+                    <button>Masuk</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

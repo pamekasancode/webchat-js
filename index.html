@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Webchat Simpel Untuk Praktek."/>
+    <meta name="keywords" content="Komunitas, Pamekasan, Madura, Programming, chat, webchat, firebase, javascript"/>
+    <meta name="author" content="Pamekasancode Team"/>
+    <title>Chat-Js</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+</head>
+<script>
+    if(!localStorage.getItem("chat-js")) {
+        window.location.replace("login.html")
+    }
+</script>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h2>Chat-JS</h2>
+                    <i class="fa fa-bars" id="btn-menu"></i>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="container">
+                <div class="chat-content">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <form id="form-chat">
+                <div class="input">
+                    <input type="text" id="message" placeholder="Ketik Pesan..." autocomplete="off" autofocus="on" required>
+                    <button>
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="menu">
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <h4>Menu</h4>
+                    </li>
+                    <li>
+                        <i class="fa fa-user"></i>
+                        <p id="name"></p>
+                    </li>
+                    <li id="fullscreen">
+                        <i class="fa fa-arrows-alt"></i>
+                        <p>Full Screen</p>
+                    </li>
+                    <li id="logout">
+                        <i class="fa fa-sign-out"></i>
+                        <p>LogOut</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
